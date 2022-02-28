@@ -7,24 +7,69 @@
     <title>Bootcamp -JavaScript 001 </title>    
 </head>
 <body>
-    <h1>Bootcamp JavaScript</h1>
-    <p>Bienvenidos!</p>
-    <p>Bootcamp</p>
-    <script>
-        function promedio(){
-            return 120;
-        }
-        console.log(promedio());
-    </script>
-   
+    <form action="index.html">
+        <input type="hidden" name="codigo" id="codigo">
+        <div>
+            <label for ="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre">
+        </div>
+        <div>
+            <label for ="cantidad">Cantidad</label>
+            <input type="number" name="cantidad" id="cantidad">
+        </div>
+        <div>
+            <label for ="precio">Precio</label>
+            <input type="number" name="precio" id="precio">
+        </div>
+        <div>
+            <label for ="categoria">Categoria</label>
+            <select name="categoria" id="categoria">
+                <option value="1">Categoria 1</option>
+                <option value="2">Categoria 2</option>
+                <option value="3">Categoria 3</option>
+                <option value="4">Categoria 4</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Guardar</button>
+        </div>
+    </form>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <td>Código</td>
+                    <td>Nombre</td>
+                    <td>Cantidad</td>
+                    <td>Precio</td>
+                    <td>Total</td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Totales:</td>
+                    <td id="cantidad-total">0</td>
+                    <td id="precio-total">0</td>
+                    <td id="gran-total">0</td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+   <script src="index.js"></script>
     <!-- 
+        <button type="submit"></button> submit envía la informacion despues de dar clic
+        si en la etiqueta a href se coloca #, quiere decir que no va refrescar y se va quedar en la misma pagina
          <script async src="index.js"></script> 
         cuando se le agrega async es para que descargue el archivo js y no se quede esperando el usuario y no 
         vea una pagina en blanco pero depende de los navegadores (los navegadores siempre que encuentran un archivo)
         lo descargan) no todos los navegadores soportan asyn, se recomienda bajar al final del body los 
         llamados a archivos js 
     -->
-    <script src="index.js"></script>
+
     
 </body>
 </html>
